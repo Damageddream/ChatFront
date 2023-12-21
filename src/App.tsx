@@ -1,20 +1,31 @@
+import React, { useEffect, useRef, useState } from 'react';
 
-import './App.css'
+// Define the type for your messages
+type Message = string; // Replace 'any' with the actual type of your messages
 
-function App() {
+const App: React.FC = () => {
+  const [messages, setMessages] = useState<Message[]>([]);
+  const ws = useRef<WebSocket | null>(null);
 
+  useEffect(() => {
+    ws.current = new WebSocket('ws://localhost:8000/');
+
+    ws.current.onmessage = (event) => {
+      setMessages((prevMessages) => [...prevMessages, event.data]);
+    };
+
+    return () => {
+      ws.current?.close();
+    };
+  }, []);
 
   return (
-    <> 
-    <button>Open connection</button>
-    <button>Close connection</button>
-    <form>
-      <input type="text" />
-      <button>Send</button>     
-    </form>
-    <div id='answer'></div>
-    </>
-  )
-}
+    <div>
+      {messages.map((message, index) => (
+        <p key={index}>{message}</p>
+      ))}
+    </div>
+  );
+};
 
-export default App
+export default App;
