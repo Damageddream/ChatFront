@@ -1,0 +1,38 @@
+first page will be login page, with login and registration subpages, next will be page, where you can make private chat rooms, public chat rooms, at chat room page, there will be list of users currently in chat room, place to show messages, place to type messages, and submit button"
+
+// Pseudo code for chat application
+
+// First page: Login page
+function showLoginPage() {
+    // Display login form
+}
+
+function showRegistrationPage() {
+    // Display registration form
+}
+
+// Next page: Chat room page
+function showChatRoomPage() {
+    // Display list of chat rooms
+}
+
+function showUsersInChatRoom(chatRoomId) {
+    // Display list of users currently in the chat room with ID chatRoomId
+}
+
+function showMessageHistory(chatRoomId) {
+    // Display message history for the chat room with ID chatRoomId
+}
+
+function sendMessage(chatRoomId, message) {
+    // Send message to the chat room with ID chatRoomId
+}
+
+// Main function
+function main() {
+    showLoginPage();
+    // Handle user login and registration logic
+
+    showChatRoomPage();
+    // Handle chat room logic
+}
