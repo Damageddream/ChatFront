@@ -7,6 +7,6 @@ import ChatPage from './Components/ChatPage.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <ChatPage />
+    <FrontPage />
   </React.StrictMode>,
 )

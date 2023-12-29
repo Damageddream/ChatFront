@@ -2,7 +2,8 @@
  * v0 by Vercel.
  * @see https://v0.dev/t/tx0wra9YfKq
  */
-import '../index.css'
+import "../index.css";
+import Button from "./ui/Button";
 
 export default function FrontPage() {
   return (
@@ -10,10 +11,8 @@ export default function FrontPage() {
       <header className="flex justify-between items-center px-6 py-4 bg-white dark:bg-black">
         <h1 className="text-4xl font-bold">ChatApp</h1>
         <div className="flex gap-4">
-          <button className="text-black dark:text-white">
-            Login
-          </button>
-          <button className="text-white bg-black">Register</button>
+          <Button variant="outline">Login</Button>
+          <Button variant="default">Register</Button>
         </div>
       </header>
       <main className="bg-gray-100 dark:bg-gray-900 py-12">
@@ -25,10 +24,8 @@ export default function FrontPage() {
                 Connect with friends and family. Share your moments.
               </p>
               <div className="flex gap-4">
-                <button className="text-black dark:text-white">
-                  Learn More
-                </button>
-                <button className="text-white bg-black">Get Started</button>
+                <Button variant="outline">Learn more</Button>
+                <Button variant="default">Get started</Button>
               </div>
             </div>
             <div className="w-1/2">
@@ -64,7 +61,5 @@ export default function FrontPage() {
         </div>
       </footer>
     </>
-  )
+  );
 }
-
-
